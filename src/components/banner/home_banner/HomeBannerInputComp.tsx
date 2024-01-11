@@ -18,7 +18,7 @@ const HomeBannerInputComp = ({
             bg={AppColors.white}
             borderRadius="10px"
             display={"flex"}
-            flexDirection={{ sm: "column", md: "row" }}
+            flexDirection={{ base: "column", md: "row" }}
             mt={"40px"}
         >
             {/* title input box */}
@@ -47,7 +47,7 @@ const HomeBannerInputComp = ({
             />
 
             {/* search button */}
-            <Box w={{ sm: "100%", md: "20%" }} onClick={onClick}>
+            <Box w={{ base: "100%", md: "20%" }} onClick={onClick}>
                 <Button
                     bg={AppColors.primary}
                     color={AppColors.white}
@@ -57,7 +57,7 @@ const HomeBannerInputComp = ({
                         color: "",
                     }}
                     w={"100%"}
-                    height={{ sm: "60px", md: "100%" }}
+                    height={{ base: "60px", md: "100%" }}
                 >
                     Search
                 </Button>

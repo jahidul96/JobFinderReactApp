@@ -10,7 +10,10 @@ const HomeBanner = () => {
     const [title, setTitle] = useState("");
     return (
         <Box className="bgHomeBanner">
-            <Box w="100%" px={{ base: "20px", md: "35px", lg: "80px" }}>
+            <Box
+                w="100%"
+                px={{ base: "20px", sm: "20px", md: "35px", lg: "80px" }}
+            >
                 <Text
                     color={AppColors.white}
                     fontFamily={fontFamily}
@@ -22,7 +25,7 @@ const HomeBanner = () => {
                         lg: "45px",
                         xl: "60px",
                     }}
-                    px={{ base: "0px", md: "60px", lg: "160px" }}
+                    px={{ base: "0px", sm: "30px", md: "60px", lg: "160px" }}
                     fontWeight="bold"
                 >
                     Find Your Dream Job With Brand Name
@@ -34,7 +37,7 @@ const HomeBanner = () => {
                     textAlign="center"
                     mt="6px"
                     fontSize={{
-                        base: "13px",
+                        base: "14px",
                         sm: "16px",
                         md: "20px",
                         lg: "23px",
