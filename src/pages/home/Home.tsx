@@ -1,6 +1,6 @@
 import { Box } from "@chakra-ui/react";
 import { Nav } from "../../components/nav/Nav";
-import HomeBanner from "./HomeBanner";
+import HomeBanner from "../../components/banner/home_banner/HomeBanner";
 
 const Home = () => {
     return (

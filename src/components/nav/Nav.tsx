@@ -5,6 +5,7 @@ import { LinkText } from "../Reusable";
 import { CiMenuFries } from "react-icons/ci";
 import { useRef } from "react";
 import NavDrawer from "./NavDrawer";
+import { fontFamily } from "../../utils/Font";
 
 export const Nav = () => {
     const { isOpen, onOpen, onClose } = useDisclosure();
@@ -25,11 +26,11 @@ export const Nav = () => {
 
             <Box display={{ base: "none", md: "block" }}>
                 <Flex alignItems="center">
-                    <LinkText text="Find Job" to="/" fontSize={18} />
-                    <LinkText text="Company" to="/" fontSize={18} mx={8} />
-                    <LinkText text="Candidate" to="/" fontSize={18} />
-                    <LinkText text="Blogs" to="/" fontSize={18} mx={8} />
-                    <LinkText text="Contact Us" to="/" fontSize={18} />
+                    <LinkText text="Find Job" to="/" fontSize={16} />
+                    <LinkText text="Company" to="/" fontSize={16} mx={8} />
+                    <LinkText text="Candidate" to="/" fontSize={16} />
+                    <LinkText text="Blogs" to="/" fontSize={16} mx={8} />
+                    <LinkText text="Contact Us" to="/" fontSize={16} />
 
                     <Button
                         ml={4}
@@ -38,6 +39,7 @@ export const Nav = () => {
                             bg: AppColors.black,
                             color: AppColors.white,
                         }}
+                        fontFamily={fontFamily}
                     >
                         SignUp
                     </Button>
