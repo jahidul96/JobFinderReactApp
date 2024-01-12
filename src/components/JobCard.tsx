@@ -4,15 +4,25 @@ import { fontFamily } from "../utils/Font";
 import { CiLocationOn, CiClock2 } from "react-icons/ci";
 import { FaDollarSign } from "react-icons/fa6";
 
-const JobCard = () => {
+interface jobCardInterface {
+    isBgColor?: boolean;
+    lessCol?: boolean;
+}
+const JobCard = ({ isBgColor, lessCol }: jobCardInterface) => {
     return (
         <Box
-            w={{ base: "100%", sm: "43%", md: "30%", lg: "23%" }}
+            w={{
+                base: "100%",
+                sm: "43%",
+                md: "30%",
+                lg: lessCol ? "30%" : "23%",
+            }}
             borderWidth="1px"
             borderColor={AppColors.primary}
             px="15px"
             py="25px"
             borderRadius={5}
+            bg={isBgColor ? AppColors.white : "transparent"}
         >
             <Box
                 w="70px"

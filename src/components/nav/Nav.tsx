@@ -26,11 +26,11 @@ export const Nav = () => {
 
             <Box display={{ base: "none", md: "block" }}>
                 <Flex alignItems="center">
-                    <LinkText text="Find Job" to="/" fontSize={16} />
-                    <LinkText text="Company" to="/" fontSize={16} mx={8} />
-                    <LinkText text="Candidate" to="/" fontSize={16} />
-                    <LinkText text="Blogs" to="/" fontSize={16} mx={8} />
-                    <LinkText text="Contact Us" to="/" fontSize={16} />
+                    <LinkText text="Find Job" to="/findjob" fontSize={15} />
+                    <LinkText text="Company" to="/" fontSize={15} mx={8} />
+                    <LinkText text="Candidate" to="/" fontSize={15} />
+                    <LinkText text="Blogs" to="/" fontSize={15} mx={8} />
+                    <LinkText text="Contact Us" to="/" fontSize={15} />
 
                     <Button
                         ml={4}

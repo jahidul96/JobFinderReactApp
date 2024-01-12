@@ -1,16 +1,12 @@
 import {
-    Button,
+    Box,
     Drawer,
-    DrawerBody,
     DrawerCloseButton,
     DrawerContent,
-    DrawerFooter,
-    DrawerHeader,
     DrawerOverlay,
-    Input,
-    useDisclosure,
 } from "@chakra-ui/react";
-import { useRef } from "react";
+
+import { LinkText } from "../Reusable";
 
 interface navDrawerInterface {
     isOpen: any;
@@ -28,18 +24,44 @@ const NavDrawer = ({ isOpen, onClose, ref }: navDrawerInterface) => {
             <DrawerOverlay />
             <DrawerContent>
                 <DrawerCloseButton />
-                <DrawerHeader>Create your account</DrawerHeader>
 
-                <DrawerBody>
-                    <Input placeholder="Type here..." />
-                </DrawerBody>
-
-                <DrawerFooter>
-                    <Button variant="outline" mr={3} onClick={onClose}>
-                        Cancel
-                    </Button>
-                    <Button colorScheme="blue">Save</Button>
-                </DrawerFooter>
+                <Box mt="50px" px="20px">
+                    <LinkText
+                        text="Find Job"
+                        to="/findjob"
+                        fontSize={15}
+                        height="35px"
+                        onClick={onClose}
+                    />
+                    <LinkText
+                        text="Company"
+                        to="/"
+                        fontSize={15}
+                        height="35px"
+                        onClick={onClose}
+                    />
+                    <LinkText
+                        text="Candidate"
+                        to="/"
+                        fontSize={15}
+                        height="35px"
+                        onClick={onClose}
+                    />
+                    <LinkText
+                        text="Blogs"
+                        to="/"
+                        fontSize={15}
+                        height="35px"
+                        onClick={onClose}
+                    />
+                    <LinkText
+                        text="Contact Us"
+                        to="/"
+                        fontSize={15}
+                        height="35px"
+                        onClick={onClose}
+                    />
+                </Box>
             </DrawerContent>
         </Drawer>
     );

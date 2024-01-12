@@ -1,5 +1,5 @@
 import { Box, Text } from "@chakra-ui/react";
-import "./homeStyle.css";
+import "../../pageCommonStyles.css";
 import { AppColors } from "../../../utils/AppColors";
 import { fontFamily } from "../../../utils/Font";
 

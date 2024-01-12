@@ -1,19 +1,14 @@
 import { Box } from "@chakra-ui/react";
-import { Nav } from "../../components/nav/Nav";
-import HomeBanner from "../../components/banner/home_banner/HomeBanner";
+import HomeBanner from "./homeComponents/HomeBanner";
 import HomeCatergoryComp from "./homeComponents/HomeCatergoryComp";
 import { AppColors } from "../../utils/AppColors";
 import HomeJobComp from "./homeComponents/HomeJobComp";
 import OurReviewComp from "./homeComponents/OurReviewComp";
 import HomeBlogComp from "./homeComponents/HomeBlogComp";
-import Footer from "../../components/Footer";
 
 const Home = () => {
     return (
         <Box w="100%" bg={AppColors.bgColor}>
-            {/* topNav */}
-            <Nav />
-
             {/* banner */}
             <HomeBanner />
 
@@ -28,9 +23,6 @@ const Home = () => {
 
             {/* HomeBlogComp */}
             <HomeBlogComp />
-
-            {/* Footer */}
-            <Footer />
         </Box>
     );
 };

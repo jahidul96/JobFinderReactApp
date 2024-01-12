@@ -1,6 +1,6 @@
 import { Box, Button } from "@chakra-ui/react";
 import { AppColors } from "../../../utils/AppColors";
-import { IconInput } from "../../Reusable";
+import { IconInput } from "../../../components/Reusable";
 import { CiSearch, CiLocationOn } from "react-icons/ci";
 
 interface homeBannerInputCompInterface {

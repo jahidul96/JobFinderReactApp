@@ -9,6 +9,8 @@ interface linkTextInterface {
     mr?: any;
     mx?: any;
     fontWeight?: string;
+    height?: string;
+    onClick?: any;
 }
 export const LinkText = ({
     fontSize,
@@ -17,6 +19,8 @@ export const LinkText = ({
     fontWeight = "normal",
     mx,
     mr,
+    height,
+    onClick,
 }: linkTextInterface) => {
     return (
         <Link
@@ -26,6 +30,7 @@ export const LinkText = ({
             _hover={{
                 textDecoration: "none",
             }}
+            onClick={onClick ? onClick : () => {}}
         >
             <Text
                 fontSize={fontSize}
@@ -33,6 +38,7 @@ export const LinkText = ({
                 mx={mx}
                 mr={mr}
                 fontFamily={fontFamily}
+                height={height}
             >
                 {text}
             </Text>
