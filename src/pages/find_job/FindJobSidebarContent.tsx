@@ -1,10 +1,10 @@
-import { Box, Divider, Input, Select, Text } from "@chakra-ui/react";
-import { AppColors } from "../../../utils/AppColors";
-import { fontFamily } from "../../../utils/Font";
-import { JobTypeCheckbox } from "./FindJobSimpleComp";
 import { useState } from "react";
+import { AppColors } from "../../utils/AppColors";
+import { Box, Divider, Input, Select, Text } from "@chakra-ui/react";
+import { fontFamily } from "../../utils/Font";
+import { JobTypeCheckbox } from "./FindJobSimpleComp";
 
-const SidebarFindJob = () => {
+export const FindJobSidebarContent = () => {
     const [checkedValue, setCheckedValue] = useState("");
 
     const [isCheckedFullTime, setIsCheckedFullTime] = useState(false);
@@ -29,45 +29,25 @@ const SidebarFindJob = () => {
     };
 
     return (
-        <Box
-            w={{ base: "100%", sm: "100%", md: "100%", lg: "25%" }}
-            bg={AppColors.white}
-            borderRadius="10px"
-            py="20px"
-            h="600px"
-        >
-            {/* top input section */}
-            <Box>
-                <Text
+        <Box>
+            <Box mt="30px" px="10px">
+                <Input placeholder="Title" />
+                <Input placeholder="Location" my="15px" />
+                <Select
+                    placeholder="Select Categories"
+                    // variant="unstyled"
+                    bg={AppColors.lightGrey}
+                    size="lg"
                     fontFamily={fontFamily}
-                    fontWeight="bold"
-                    px="15px"
-                    mb="15px"
                     fontSize="15px"
+                    mb="30px"
                 >
-                    Search Filter
-                </Text>
+                    <option value="option1">Option 1</option>
+                    <option value="option2">Option 2</option>
+                    <option value="option3">Option 3</option>
+                </Select>
+
                 <Divider />
-
-                <Box mt="30px" px="10px">
-                    <Input placeholder="Title" />
-                    <Input placeholder="Location" my="15px" />
-                    <Select
-                        placeholder="Select Categories"
-                        // variant="unstyled"
-                        bg={AppColors.lightGrey}
-                        size="lg"
-                        fontFamily={fontFamily}
-                        fontSize="15px"
-                        mb="30px"
-                    >
-                        <option value="option1">Option 1</option>
-                        <option value="option2">Option 2</option>
-                        <option value="option3">Option 3</option>
-                    </Select>
-
-                    <Divider />
-                </Box>
             </Box>
 
             {/* job type content */}
@@ -124,5 +104,3 @@ const SidebarFindJob = () => {
         </Box>
     );
 };
-
-export default SidebarFindJob;

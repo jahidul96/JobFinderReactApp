@@ -1,6 +1,6 @@
 import { Button, Flex, Text, Link, Box, useDisclosure } from "@chakra-ui/react";
 import { AppColors } from "../../utils/AppColors";
-import { Link as RouterLink } from "react-router-dom";
+import { Link as RouterLink, useNavigate } from "react-router-dom";
 import { LinkText } from "../Reusable";
 import { CiMenuFries } from "react-icons/ci";
 import { useRef } from "react";
@@ -10,6 +10,7 @@ import { fontFamily } from "../../utils/Font";
 export const Nav = () => {
     const { isOpen, onOpen, onClose } = useDisclosure();
     const btnRef = useRef();
+    const navigate = useNavigate();
     return (
         <Flex
             w="100%"
@@ -27,10 +28,28 @@ export const Nav = () => {
             <Box display={{ base: "none", md: "block" }}>
                 <Flex alignItems="center">
                     <LinkText text="Find Job" to="/findjob" fontSize={15} />
-                    <LinkText text="Company" to="/" fontSize={15} mx={8} />
-                    <LinkText text="Candidate" to="/" fontSize={15} />
-                    <LinkText text="Blogs" to="/" fontSize={15} mx={8} />
-                    <LinkText text="Contact Us" to="/" fontSize={15} />
+                    <LinkText
+                        text="Company"
+                        to="/companypage"
+                        fontSize={15}
+                        mx={8}
+                    />
+                    <LinkText
+                        text="Candidate"
+                        to="/candidatepage"
+                        fontSize={15}
+                    />
+                    <LinkText
+                        text="Blogs"
+                        to="/blogpage"
+                        fontSize={15}
+                        mx={8}
+                    />
+                    <LinkText
+                        text="Contact Us"
+                        to="/contactpage"
+                        fontSize={15}
+                    />
 
                     <Button
                         ml={4}
@@ -40,6 +59,7 @@ export const Nav = () => {
                             color: AppColors.white,
                         }}
                         fontFamily={fontFamily}
+                        onClick={() => navigate("/auth")}
                     >
                         SignUp
                     </Button>

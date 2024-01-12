@@ -35,28 +35,35 @@ const NavDrawer = ({ isOpen, onClose, ref }: navDrawerInterface) => {
                     />
                     <LinkText
                         text="Company"
-                        to="/"
+                        to="/companypage"
                         fontSize={15}
                         height="35px"
                         onClick={onClose}
                     />
                     <LinkText
                         text="Candidate"
-                        to="/"
+                        to="/candidatepage"
                         fontSize={15}
                         height="35px"
                         onClick={onClose}
                     />
                     <LinkText
                         text="Blogs"
-                        to="/"
+                        to="/blogpage"
                         fontSize={15}
                         height="35px"
                         onClick={onClose}
                     />
                     <LinkText
                         text="Contact Us"
-                        to="/"
+                        to="/contactpage"
+                        fontSize={15}
+                        height="35px"
+                        onClick={onClose}
+                    />
+                    <LinkText
+                        text="Signup"
+                        to="/auth"
                         fontSize={15}
                         height="35px"
                         onClick={onClose}

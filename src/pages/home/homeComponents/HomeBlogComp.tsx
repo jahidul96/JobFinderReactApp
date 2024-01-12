@@ -32,7 +32,7 @@ const HomeBlogComp = () => {
                 Read Our Blogs
             </Text>
 
-            {/* categories card  */}
+            {/* job card  */}
             <Box mt="30px" w="100%">
                 <Flex
                     gap="15px"
