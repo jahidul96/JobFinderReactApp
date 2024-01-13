@@ -1,32 +1,10 @@
-import { useState } from "react";
 import { AppColors } from "../../utils/AppColors";
 import { Box, Divider, Input, Select, Text } from "@chakra-ui/react";
 import { fontFamily } from "../../utils/Font";
 import { JobTypeCheckbox } from "./FindJobSimpleComp";
 
 export const FindJobSidebarContent = () => {
-    const [checkedValue, setCheckedValue] = useState("");
-
-    const [isCheckedFullTime, setIsCheckedFullTime] = useState(false);
-    const [isCheckedPartTime, setIsCheckedPartTime] = useState(false);
-    const [isCheckedFreelance, setIsCheckedFreelance] = useState(false);
-    const [isCheckedRemote, setIsCheckedRemote] = useState(false);
-    const [isCheckedContractbase, setIsCheckedContractbase] = useState(false);
-    const [isCheckedInternship, setIsCheckedInternship] = useState(false);
-
-    const handleCheckboxChange = (val: string) => {
-        if (val == "fulltime") {
-            setIsCheckedFullTime(!isCheckedFullTime);
-            if (!isCheckedFullTime) {
-                console.log("Checkbox is checked");
-                // Do something when the checkbox is checked
-            } else {
-                console.log("Checkbox is unchecked");
-                // Do something when the checkbox is unchecked
-            }
-        } else {
-        }
-    };
+    const handleCheckboxChange = (val: string) => {};
 
     return (
         <Box>
@@ -67,38 +45,32 @@ export const FindJobSidebarContent = () => {
                     handleCheckboxChange={() =>
                         handleCheckboxChange("fulltime")
                     }
-                    isChecked={isCheckedFullTime}
                 />
                 <JobTypeCheckbox
                     value={"Part-Time"}
                     handleCheckboxChange={() =>
                         handleCheckboxChange("parttime")
                     }
-                    isChecked={isCheckedPartTime}
                 />
                 <JobTypeCheckbox
                     value={"Contract-base"}
                     handleCheckboxChange={() =>
                         handleCheckboxChange("contract")
                     }
-                    isChecked={isCheckedContractbase}
                 />
                 <JobTypeCheckbox
                     value={"Remote"}
                     handleCheckboxChange={() => handleCheckboxChange("remote")}
-                    isChecked={isCheckedRemote}
                 />
                 <JobTypeCheckbox
                     value={"Internship"}
                     handleCheckboxChange={() => handleCheckboxChange("intern")}
-                    isChecked={isCheckedInternship}
                 />
                 <JobTypeCheckbox
                     value={"Freelance"}
                     handleCheckboxChange={() =>
                         handleCheckboxChange("freelance")
                     }
-                    isChecked={isCheckedFreelance}
                 />
             </Box>
         </Box>

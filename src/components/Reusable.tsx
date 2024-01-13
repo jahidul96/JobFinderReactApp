@@ -1,6 +1,7 @@
-import { Box, Input, Link, Text } from "@chakra-ui/react";
+import { Box, Flex, Input, Link, Spacer, Text } from "@chakra-ui/react";
 import { Link as RouterLink } from "react-router-dom";
 import { fontFamily } from "../utils/Font";
+import { AppColors } from "../utils/AppColors";
 
 interface linkTextInterface {
     to: string;
@@ -66,5 +67,30 @@ export const IconInput = ({
                 variant="unstyled"
             />
         </Box>
+    );
+};
+
+interface pageInterface {
+    infoText: string;
+    children: any;
+}
+
+export const CounterRowComp = ({ children, infoText }: pageInterface) => {
+    return (
+        <Flex
+            bg={AppColors.white}
+            px="15px"
+            borderRadius="5px"
+            py="10px"
+            justifyContent="space-between"
+            alignItems="center"
+        >
+            <Text fontFamily={fontFamily} fontWeight="bold" fontSize="14px">
+                {infoText}
+            </Text>
+            <Spacer />
+
+            {children}
+        </Flex>
     );
 };

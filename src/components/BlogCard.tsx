@@ -27,8 +27,9 @@ const BlogCard = () => {
                     borderRadius="lg"
                 />
                 <Stack mt="6">
+                    <Text color={AppColors.black}>15th jan 2023</Text>
                     <Heading size="md" fontFamily={fontFamily}>
-                        Living room Sofa
+                        Blog Title!
                     </Heading>
                     <Text fontFamily={fontFamily}>
                         Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -45,6 +46,7 @@ const BlogCard = () => {
                         color: AppColors.white,
                         bg: AppColors.primary,
                     }}
+                    mt={-5}
                 >
                     Read More
                 </Button>

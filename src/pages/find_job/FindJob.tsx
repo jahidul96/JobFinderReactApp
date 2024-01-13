@@ -2,25 +2,27 @@ import { Box, Flex } from "@chakra-ui/react";
 
 import { AppColors } from "../../utils/AppColors";
 import CommonStyleBanner from "../../components/CommonStyleBanner";
-import TwoRowResponsiveComp from "../../components/TwoRowResponsiveComp";
+import RowResponsiveComp from "../../components/RowResponsiveComp";
 import CommonRightBigSidebar from "../../components/CommonRightBigSidebar";
-import {
-    FoundJobCounterAndSortComp,
-    SelectTimingComp,
-} from "./FindJobSimpleComp";
+import { SelectTimingComp } from "./FindJobSimpleComp";
 import JobCard from "../../components/JobCard";
 import Sidebar from "../../components/Sidebar";
 import { FindJobSidebarContent } from "./FindJobSidebarContent";
+import { findJobPageBanner } from "../../utils/AppLocalAssetsImports";
+import { CounterRowComp } from "../../components/Reusable";
 
 const jobList = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
 const FindJob = () => {
     return (
         <Box w="100%" bg={AppColors.bgColor}>
-            <CommonStyleBanner title="Find Your Dream Job" />
+            <CommonStyleBanner
+                title="Find Your Dream Job"
+                bannerImg={findJobPageBanner}
+            />
 
             {/* two colum comp(sidebar and job side) */}
-            <TwoRowResponsiveComp
+            <RowResponsiveComp
                 children={
                     <>
                         {/* sidebar */}
@@ -33,7 +35,7 @@ const FindJob = () => {
                             children={
                                 <>
                                     {/* count info comp */}
-                                    <FoundJobCounterAndSortComp
+                                    <CounterRowComp
                                         infoText="We have 10 job offer!"
                                         children={<SelectTimingComp />}
                                     />

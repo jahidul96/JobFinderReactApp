@@ -2,21 +2,25 @@ import { Box, Button, Flex } from "@chakra-ui/react";
 
 import { AppColors } from "../../utils/AppColors";
 import CommonStyleBanner from "../../components/CommonStyleBanner";
-import TwoRowResponsiveComp from "../../components/TwoRowResponsiveComp";
+import RowResponsiveComp from "../../components/RowResponsiveComp";
 import Sidebar from "../../components/Sidebar";
 import CommonRightBigSidebar from "../../components/CommonRightBigSidebar";
-import { FoundJobCounterAndSortComp } from "../find_job/FindJobSimpleComp";
 import ReviewCard from "../../components/ReviewCard";
 import { CandidateSidebarFilterComp } from "./CandidateSimpleComp";
+import { candidatePageBanner } from "../../utils/AppLocalAssetsImports";
+import { CounterRowComp } from "../../components/Reusable";
 
 const companyList = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 const CandidatePage = () => {
     return (
         <Box w="100%" bg={AppColors.bgColor}>
-            <CommonStyleBanner title="Find Your Role Fit Candidate" />
+            <CommonStyleBanner
+                title="Find Your Role Fit Candidate"
+                bannerImg={candidatePageBanner}
+            />
 
             {/* two colum comp(sidebar and company side) */}
-            <TwoRowResponsiveComp
+            <RowResponsiveComp
                 children={
                     <>
                         {/* sidebar */}
@@ -29,10 +33,18 @@ const CandidatePage = () => {
                             children={
                                 <>
                                     {/* count info comp */}
-                                    <FoundJobCounterAndSortComp
+                                    <CounterRowComp
                                         infoText="We have found 100 Candidate here!"
                                         children={
-                                            <Button>Add Your resume</Button>
+                                            <Button
+                                                bg={AppColors.primary}
+                                                color={AppColors.white}
+                                                _hover={{
+                                                    bg: AppColors.black,
+                                                }}
+                                            >
+                                                Add Your resume
+                                            </Button>
                                         }
                                     />
                                     {/* company list */}

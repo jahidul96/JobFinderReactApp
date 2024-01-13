@@ -2,21 +2,25 @@ import { Box, Button, Flex } from "@chakra-ui/react";
 
 import { AppColors } from "../../utils/AppColors";
 import CommonStyleBanner from "../../components/CommonStyleBanner";
-import TwoRowResponsiveComp from "../../components/TwoRowResponsiveComp";
+import RowResponsiveComp from "../../components/RowResponsiveComp";
 import Sidebar from "../../components/Sidebar";
 import CommonRightBigSidebar from "../../components/CommonRightBigSidebar";
-import { FoundJobCounterAndSortComp } from "../find_job/FindJobSimpleComp";
 import JobCard from "../../components/JobCard";
 import { CompanySidebarFilterComp } from "./CompanySimpleComp";
+import { companyPageBanner } from "../../utils/AppLocalAssetsImports";
+import { CounterRowComp } from "../../components/Reusable";
 
 const companyList = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 const CompanyPage = () => {
     return (
         <Box w="100%" bg={AppColors.bgColor}>
-            <CommonStyleBanner title="Find Your Dream Company" />
+            <CommonStyleBanner
+                title="Find Your Dream Company"
+                bannerImg={companyPageBanner}
+            />
 
             {/* two colum comp(sidebar and company side) */}
-            <TwoRowResponsiveComp
+            <RowResponsiveComp
                 children={
                     <>
                         {/* sidebar */}
@@ -29,10 +33,18 @@ const CompanyPage = () => {
                             children={
                                 <>
                                     {/* count info comp */}
-                                    <FoundJobCounterAndSortComp
+                                    <CounterRowComp
                                         infoText="We have found 20 Cmpany!"
                                         children={
-                                            <Button>Add Your Company</Button>
+                                            <Button
+                                                bg={AppColors.primary}
+                                                color={AppColors.white}
+                                                _hover={{
+                                                    bg: AppColors.black,
+                                                }}
+                                            >
+                                                Add Your Company
+                                            </Button>
                                         }
                                     />
                                     {/* company list */}

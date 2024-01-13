@@ -4,7 +4,7 @@ interface twoRowStyleCompInterface {
     children: any;
 }
 
-const TwoRowResponsiveComp = ({ children }: twoRowStyleCompInterface) => {
+const RowResponsiveComp = ({ children }: twoRowStyleCompInterface) => {
     return (
         <Box
             w="100%"
@@ -23,4 +23,4 @@ const TwoRowResponsiveComp = ({ children }: twoRowStyleCompInterface) => {
     );
 };
 
-export default TwoRowResponsiveComp;
+export default RowResponsiveComp;
