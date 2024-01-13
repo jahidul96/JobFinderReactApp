@@ -9,6 +9,9 @@ import ReviewCard from "../../components/ReviewCard";
 import { CandidateSidebarFilterComp } from "./CandidateSimpleComp";
 import { candidatePageBanner } from "../../utils/AppLocalAssetsImports";
 import { CounterRowComp } from "../../components/Reusable";
+import CandidateProfileCard from "../../components/CandidateProfileCard";
+import { candidateData } from "../../data/candidateData";
+import { candidateDetailInterface } from "../../utils/AppReusableInterfaces";
 
 const companyList = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 const CandidatePage = () => {
@@ -55,9 +58,17 @@ const CandidatePage = () => {
                                             alignItems="center"
                                             justifyContent="center"
                                         >
-                                            {companyList.map((item: number) => (
-                                                <ReviewCard key={item} />
-                                            ))}
+                                            {candidateData.map(
+                                                (
+                                                    item: candidateDetailInterface,
+                                                    index: number
+                                                ) => (
+                                                    <CandidateProfileCard
+                                                        key={index}
+                                                        profileDetails={item}
+                                                    />
+                                                )
+                                            )}
                                         </Flex>
                                     </Box>
                                 </>

@@ -2,6 +2,8 @@ import { Box, Button, Flex, Text } from "@chakra-ui/react";
 import { AppColors } from "../../../utils/AppColors";
 import { fontFamily } from "../../../utils/Font";
 import ReviewCard from "../../../components/ReviewCard";
+import { reviewData } from "../../../data/reviewData";
+import { reviewInterface } from "../../../utils/AppReusableInterfaces";
 
 const categoryCount = [0, 1, 2];
 const OurReviewComp = () => {
@@ -33,8 +35,8 @@ const OurReviewComp = () => {
                     alignItems="center"
                     justifyContent="center"
                 >
-                    {categoryCount.map((item: number) => (
-                        <ReviewCard key={item} />
+                    {reviewData.map((item: reviewInterface, index: number) => (
+                        <ReviewCard key={index} reviewDetails={item} />
                     ))}
                 </Flex>
             </Box>

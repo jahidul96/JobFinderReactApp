@@ -2,6 +2,8 @@ import { Box, Button, Flex, Text } from "@chakra-ui/react";
 import { AppColors } from "../../../utils/AppColors";
 import { fontFamily } from "../../../utils/Font";
 import JobCard from "../../../components/JobCard";
+import { jobDummyData } from "../../../data/job_dummyData";
+import { jobInterface } from "../../../utils/AppReusableInterfaces";
 
 const categoryCount = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
 const HomeJobComp = () => {
@@ -39,8 +41,14 @@ const HomeJobComp = () => {
                     alignItems="center"
                     justifyContent="center"
                 >
-                    {categoryCount.map((item: number) => (
-                        <JobCard key={item} />
+                    {jobDummyData.map((item: jobInterface, index: number) => (
+                        <JobCard
+                            key={index}
+                            isBgColor
+                            lessCol
+                            jobDetails={item}
+                            jobCard
+                        />
                     ))}
                 </Flex>
             </Box>

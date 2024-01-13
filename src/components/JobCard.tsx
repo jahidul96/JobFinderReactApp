@@ -3,12 +3,26 @@ import { AppColors } from "../utils/AppColors";
 import { fontFamily } from "../utils/Font";
 import { CiLocationOn, CiClock2 } from "react-icons/ci";
 import { FaDollarSign } from "react-icons/fa6";
+import { LuUsers } from "react-icons/lu";
+import {
+    companyDetailInterface,
+    jobInterface,
+} from "../utils/AppReusableInterfaces";
 
 interface jobCardInterface {
     isBgColor?: boolean;
     lessCol?: boolean;
+    jobDetails?: jobInterface;
+    companyDetails?: companyDetailInterface;
+    jobCard: boolean;
 }
-const JobCard = ({ isBgColor, lessCol }: jobCardInterface) => {
+const JobCard = ({
+    isBgColor,
+    lessCol,
+    jobDetails,
+    jobCard,
+    companyDetails,
+}: jobCardInterface) => {
     return (
         <Box
             w={{
@@ -18,24 +32,27 @@ const JobCard = ({ isBgColor, lessCol }: jobCardInterface) => {
                 lg: lessCol ? "30%" : "23%",
             }}
             borderWidth="1px"
-            borderColor={AppColors.primary}
+            borderColor={jobCard ? AppColors.primary : AppColors.black}
             px="15px"
             py="25px"
             borderRadius={5}
             bg={isBgColor ? AppColors.white : "transparent"}
         >
-            <Box
-                w="70px"
-                py="4px"
-                bg={AppColors.primaryLayerColor}
-                mb="10px"
-                display="flex"
-                justifyContent="center"
-                alignItems="center"
-                fontFamily={fontFamily}
-            >
-                <Text fontSize="13px">Part Time</Text>
-            </Box>
+            {/* jobType text box */}
+            {jobCard ? (
+                <Box
+                    w="70px"
+                    py="4px"
+                    bg={AppColors.primaryLayerColor}
+                    mb="10px"
+                    display="flex"
+                    justifyContent="center"
+                    alignItems="center"
+                    fontFamily={fontFamily}
+                >
+                    <Text fontSize="13px">{jobDetails?.jobType}</Text>
+                </Box>
+            ) : null}
             <Box
                 display="flex"
                 flexDirection="column"
@@ -44,7 +61,11 @@ const JobCard = ({ isBgColor, lessCol }: jobCardInterface) => {
                 py="15px"
             >
                 <Image
-                    src="/icon.jpg"
+                    src={
+                        jobCard
+                            ? jobDetails?.companyLogo
+                            : companyDetails?.companyLogo
+                    }
                     w="80px"
                     h="80px"
                     borderRadius={5}
@@ -52,36 +73,71 @@ const JobCard = ({ isBgColor, lessCol }: jobCardInterface) => {
                 />
             </Box>
 
-            <Box mb="10px" mt="12px">
-                <Text fontFamily={fontFamily} fontSize="14px">
-                    Billing Support Specialist Job
+            <Box mb="20px" mt="12px">
+                <Text
+                    fontFamily={fontFamily}
+                    fontSize="14px"
+                    textAlign="center"
+                >
+                    {jobCard
+                        ? jobDetails?.jobTitle
+                        : companyDetails?.companyName}
                 </Text>
 
-                <Flex alignItems="center" mt="8px">
-                    <CiLocationOn size={17} mt="13px" />
+                <Flex alignItems="center" justifyContent="center" mt="8px">
+                    {jobCard ? <CiLocationOn size={17} mt="13px" /> : null}
                     <Text
                         ml="5px"
-                        color={AppColors.primary}
+                        color={AppColors.black}
                         fontFamily={fontFamily}
                         fontSize="13px"
                     >
-                        Location
+                        {jobCard
+                            ? jobDetails?.jobLocation
+                            : companyDetails?.companyQuates}
                     </Text>
                 </Flex>
             </Box>
 
             <Flex alignItems="center">
-                <FaDollarSign />
-                <Text ml="10px" fontFamily={fontFamily} fontSize="12px">
-                    20k-30k Taka / Per-Month
+                {jobCard ? <FaDollarSign /> : <LuUsers />}
+                <Text
+                    ml="10px"
+                    fontFamily={fontFamily}
+                    fontSize="12px"
+                    color={AppColors.black}
+                >
+                    {jobCard
+                        ? jobDetails?.salary
+                        : companyDetails?.totalEmploye}
                 </Text>
             </Flex>
-            <Flex alignItems="center" mt="10px">
-                <CiClock2 />
-                <Text ml="10px" fontFamily={fontFamily} fontSize="11px">
-                    1 Month ago
-                </Text>
-            </Flex>
+
+            {jobCard ? (
+                <Flex alignItems="center" mt="10px">
+                    <CiClock2 />
+                    <Text
+                        ml="10px"
+                        fontFamily={fontFamily}
+                        fontSize="11px"
+                        color={AppColors.black}
+                    >
+                        {jobDetails?.postTime} ago
+                    </Text>
+                </Flex>
+            ) : (
+                <Flex alignItems="center" mt="10px">
+                    <CiLocationOn size={17} mt="13px" />
+                    <Text
+                        ml="10px"
+                        fontFamily={fontFamily}
+                        fontSize="11px"
+                        color={AppColors.black}
+                    >
+                        {companyDetails?.location}
+                    </Text>
+                </Flex>
+            )}
 
             <Button
                 bg={AppColors.black}
@@ -91,7 +147,7 @@ const JobCard = ({ isBgColor, lessCol }: jobCardInterface) => {
                 mt="25px"
                 _hover={{ bg: AppColors.primary, color: AppColors.white }}
             >
-                Apply Now
+                {jobCard ? "Apply Now" : "See Details"}
             </Button>
         </Box>
     );
