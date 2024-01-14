@@ -44,7 +44,7 @@ export const blogDummyData: blogInterface[] = [
         id: "5",
         imageUrl: softwareDevLogo,
         postedDate: "01 feb 2022",
-        title: "All About Software developer skillset!!",
+        title: "All About Software developer!!",
         postDetailsText:
             "Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident veritatis inventore, minima autem quae praesentium doloremque rerum, debitis quisquam amet sapiente ex vitae aliquam voluptatibus deserunt illo recusandae hic? Deleniti!",
     },

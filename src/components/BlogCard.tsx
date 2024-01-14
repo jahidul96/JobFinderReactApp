@@ -4,7 +4,6 @@ import {
     Card,
     CardBody,
     CardFooter,
-    Heading,
     Image,
     Stack,
     Text,
@@ -19,7 +18,7 @@ interface pageInterface {
 const BlogCard = ({ blogDetails }: pageInterface) => {
     return (
         <Card
-            maxW="sm"
+            w={{ base: "90%", sm: "90%", md: "45%", lg: "30%" }}
             _hover={{
                 borderWidth: "1px",
                 borderColor: AppColors.primary,

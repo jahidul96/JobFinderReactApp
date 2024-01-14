@@ -5,9 +5,10 @@ import { AppColors } from "../../../utils/AppColors";
 import BlogCard from "../../../components/BlogCard";
 import { blogDummyData } from "../../../data/blogDummyData";
 import { blogInterface } from "../../../utils/AppReusableInterfaces";
+import { useNavigate } from "react-router-dom";
 
-const categoryCount = [0, 1, 2, 3, 4, 5];
 const HomeBlogComp = () => {
+    const navigate = useNavigate();
     return (
         <Box
             mt="50px"
@@ -54,6 +55,7 @@ const HomeBlogComp = () => {
                     bg={AppColors.black}
                     color={AppColors.white}
                     _hover={{ bg: AppColors.primary, color: AppColors.white }}
+                    onClick={() => navigate("/blogpage")}
                 >
                     See All Blogs
                 </Button>
