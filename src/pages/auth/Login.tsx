@@ -25,8 +25,8 @@ function Login({ onClick }: loginInterFace) {
 
     return (
         <Box
-            w={300}
-            h={350}
+            w={"350px"}
+            h={"350px"}
             borderColor={"gray.50"}
             borderWidth={1}
             borderRadius={10}

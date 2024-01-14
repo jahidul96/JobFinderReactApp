@@ -1,6 +1,6 @@
-import { Button, Flex, Text, Link, Box, useDisclosure } from "@chakra-ui/react";
+import { Button, Flex, Box, useDisclosure } from "@chakra-ui/react";
 import { AppColors } from "../../utils/AppColors";
-import { Link as RouterLink, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { LinkText } from "../Reusable";
 import { CiMenuFries } from "react-icons/ci";
 import { useRef } from "react";

@@ -31,3 +31,18 @@ export interface candidateDetailInterface {
     location: string;
     skills: string[];
 }
+
+export interface catergoryInterface {
+    icon: string;
+    jobTitle: string;
+    id: string;
+    jobFound: string;
+}
+
+export interface blogInterface {
+    imageUrl: string;
+    postedDate: string;
+    title: string;
+    postDetailsText: string;
+    id: string;
+}

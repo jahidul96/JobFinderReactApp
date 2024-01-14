@@ -4,6 +4,8 @@ import { AppColors } from "../../utils/AppColors";
 import CommonStyleBanner from "../../components/CommonStyleBanner";
 import BlogCard from "../../components/BlogCard";
 import { blogPageBanner } from "../../utils/AppLocalAssetsImports";
+import { blogDummyData } from "../../data/blogDummyData";
+import { blogInterface } from "../../utils/AppReusableInterfaces";
 
 const blogList = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 const BlogPage = () => {
@@ -20,8 +22,8 @@ const BlogPage = () => {
                     alignItems="center"
                     justifyContent="center"
                 >
-                    {blogList.map((item: number) => (
-                        <BlogCard key={item} />
+                    {blogDummyData.map((item: blogInterface, index: number) => (
+                        <BlogCard key={index} blogDetails={item} />
                     ))}
                 </Flex>
             </Box>

@@ -2,9 +2,10 @@ import { Box, Button, Flex, Text } from "@chakra-ui/react";
 
 import { AppColors } from "../../../utils/AppColors";
 import { fontFamily } from "../../../utils/Font";
-import CategoriesCard from "./CategoriesCard";
+import CategoriesCard from "../../../components/CategoriesCard";
+import { categoryData } from "../../../data/categoryDummyData";
+import { catergoryInterface } from "../../../utils/AppReusableInterfaces";
 
-const categoryCount = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
 const HomeCatergoryComp = () => {
     return (
         <Box mt="50px" w="100%" px={{ base: "15px", sm: "20px" }}>
@@ -34,9 +35,14 @@ const HomeCatergoryComp = () => {
                     alignItems="center"
                     justifyContent="center"
                 >
-                    {categoryCount.map((item: number) => (
-                        <CategoriesCard key={item} />
-                    ))}
+                    {categoryData.map(
+                        (item: catergoryInterface, index: number) => (
+                            <CategoriesCard
+                                key={index}
+                                categorieDetails={item}
+                            />
+                        )
+                    )}
                 </Flex>
             </Box>
 

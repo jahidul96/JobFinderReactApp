@@ -1,4 +1,5 @@
 import {
+    Box,
     Button,
     Card,
     CardBody,
@@ -10,8 +11,12 @@ import {
 } from "@chakra-ui/react";
 import { AppColors } from "../utils/AppColors";
 import { fontFamily } from "../utils/Font";
+import { blogInterface } from "../utils/AppReusableInterfaces";
 
-const BlogCard = () => {
+interface pageInterface {
+    blogDetails: blogInterface;
+}
+const BlogCard = ({ blogDetails }: pageInterface) => {
     return (
         <Card
             maxW="sm"
@@ -21,22 +26,54 @@ const BlogCard = () => {
             }}
         >
             <CardBody>
-                <Image
-                    src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
-                    alt="Green double couch with wooden legs"
-                    borderRadius="lg"
-                />
+                <Box display="flex" justifyContent="center" alignItems="center">
+                    <Image
+                        src={blogDetails.imageUrl}
+                        alt="blogImg"
+                        borderRadius="lg"
+                        h={{
+                            base: "100px",
+                            sm: "100px",
+                            md: "100px",
+                            lg: "200px",
+                        }}
+                        fit="cover"
+                    />
+                </Box>
                 <Stack mt="6">
-                    <Text color={AppColors.black}>15th jan 2023</Text>
-                    <Heading size="md" fontFamily={fontFamily}>
-                        Blog Title!
-                    </Heading>
-                    <Text fontFamily={fontFamily}>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Provident veritatis inventore, minima autem quae
-                        praesentium doloremque rerum, debitis quisquam amet
-                        sapiente ex vitae aliquam voluptatibus deserunt illo
-                        recusandae hic? Deleniti!
+                    <Text
+                        color={AppColors.black}
+                        fontSize={{
+                            base: "12px",
+                            sm: "12px",
+                            md: "14px",
+                            lg: "14px",
+                        }}
+                    >
+                        {blogDetails.postedDate}
+                    </Text>
+                    <Text
+                        fontSize={{
+                            base: "15px",
+                            sm: "15px",
+                            md: "15px",
+                            lg: "18px",
+                        }}
+                        fontWeight="bold"
+                        fontFamily={fontFamily}
+                    >
+                        {blogDetails.title}
+                    </Text>
+                    <Text
+                        fontFamily={fontFamily}
+                        fontSize={{
+                            base: "13px",
+                            sm: "13px",
+                            md: "15px",
+                            lg: "15px",
+                        }}
+                    >
+                        {blogDetails.postDetailsText}
                     </Text>
                 </Stack>
             </CardBody>

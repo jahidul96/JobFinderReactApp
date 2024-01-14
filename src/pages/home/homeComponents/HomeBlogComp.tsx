@@ -3,6 +3,8 @@ import { Box, Button, Flex, Text } from "@chakra-ui/react";
 import { fontFamily } from "../../../utils/Font";
 import { AppColors } from "../../../utils/AppColors";
 import BlogCard from "../../../components/BlogCard";
+import { blogDummyData } from "../../../data/blogDummyData";
+import { blogInterface } from "../../../utils/AppReusableInterfaces";
 
 const categoryCount = [0, 1, 2, 3, 4, 5];
 const HomeBlogComp = () => {
@@ -40,8 +42,8 @@ const HomeBlogComp = () => {
                     alignItems="center"
                     justifyContent="center"
                 >
-                    {categoryCount.map((item: number) => (
-                        <BlogCard key={item} />
+                    {blogDummyData.map((item: blogInterface, index: number) => (
+                        <BlogCard key={index} blogDetails={item} />
                     ))}
                 </Flex>
             </Box>

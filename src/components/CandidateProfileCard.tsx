@@ -4,14 +4,16 @@ import { AppColors } from "../utils/AppColors";
 import { CiLocationOn } from "react-icons/ci";
 import { candidateDetailInterface } from "../utils/AppReusableInterfaces";
 
-const profilePic =
-    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOVsMByfxq2r5vxcDd1PPdyTNe5fRnfuaLwA&usqp=CAU";
 interface pageInterface {
     profileDetails: candidateDetailInterface;
 }
 const CandidateProfileCard = ({ profileDetails }: pageInterface) => {
     return (
-        <Card w="30%" py="30px" px="20px">
+        <Card
+            w={{ base: "100%", sm: "100%", md: "45%", lg: "30%" }}
+            py="30px"
+            px="20px"
+        >
             <Box
                 display="flex"
                 flexDirection="column"

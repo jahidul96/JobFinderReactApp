@@ -42,8 +42,7 @@ const SignUp = ({ onClick }: signupInterFace) => {
 
     return (
         <Box
-            w={300}
-            h={450}
+            w={"350px"}
             borderColor={"gray.50"}
             borderWidth={1}
             borderRadius={10}

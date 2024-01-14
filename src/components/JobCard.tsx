@@ -26,7 +26,7 @@ const JobCard = ({
     return (
         <Box
             w={{
-                base: "100%",
+                base: "90%",
                 sm: "43%",
                 md: "30%",
                 lg: lessCol ? "30%" : "23%",
