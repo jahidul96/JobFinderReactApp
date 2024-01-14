@@ -5,7 +5,6 @@ import ReviewCard from "../../../components/ReviewCard";
 import { reviewData } from "../../../data/reviewData";
 import { reviewInterface } from "../../../utils/AppReusableInterfaces";
 
-const categoryCount = [0, 1, 2];
 const OurReviewComp = () => {
     return (
         <Box mt="50px" w="100%" px={{ base: "15px", sm: "20px" }}>

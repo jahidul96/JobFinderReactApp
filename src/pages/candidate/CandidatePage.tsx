@@ -5,7 +5,6 @@ import CommonStyleBanner from "../../components/CommonStyleBanner";
 import RowResponsiveComp from "../../components/RowResponsiveComp";
 import Sidebar from "../../components/Sidebar";
 import CommonRightBigSidebar from "../../components/CommonRightBigSidebar";
-import ReviewCard from "../../components/ReviewCard";
 import { CandidateSidebarFilterComp } from "./CandidateSimpleComp";
 import { candidatePageBanner } from "../../utils/AppLocalAssetsImports";
 import { CounterRowComp } from "../../components/Reusable";
@@ -13,7 +12,6 @@ import CandidateProfileCard from "../../components/CandidateProfileCard";
 import { candidateData } from "../../data/candidateData";
 import { candidateDetailInterface } from "../../utils/AppReusableInterfaces";
 
-const companyList = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 const CandidatePage = () => {
     return (
         <Box w="100%" bg={AppColors.bgColor}>

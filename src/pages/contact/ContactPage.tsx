@@ -1,12 +1,4 @@
-import {
-    Box,
-    Button,
-    Divider,
-    Flex,
-    Input,
-    Text,
-    Textarea,
-} from "@chakra-ui/react";
+import { Box, Button, Divider, Input, Text, Textarea } from "@chakra-ui/react";
 import CommonStyleBanner from "../../components/CommonStyleBanner";
 import { blogPageBanner } from "../../utils/AppLocalAssetsImports";
 import { fontFamily } from "../../utils/Font";

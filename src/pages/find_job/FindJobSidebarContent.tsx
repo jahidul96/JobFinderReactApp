@@ -4,7 +4,9 @@ import { fontFamily } from "../../utils/Font";
 import { JobTypeCheckbox } from "./FindJobSimpleComp";
 
 export const FindJobSidebarContent = () => {
-    const handleCheckboxChange = (val: string) => {};
+    const handleCheckboxChange = (val: string) => {
+        console.log(val);
+    };
 
     return (
         <Box>

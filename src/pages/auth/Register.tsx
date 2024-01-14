@@ -24,6 +24,16 @@ const SignUp = ({ onClick }: signupInterFace) => {
     const [loading, setLoading] = useState(false);
 
     const handleImageChange = (e: ChangeEvent<HTMLInputElement>) => {
+        console.log(e);
+        console.log(
+            imageFile,
+            setImageFile,
+            setImageUrl,
+            name,
+            email,
+            password,
+            setLoading
+        );
         // const file = e.target.files[0];
         // console.log(file);
         // if (file) {

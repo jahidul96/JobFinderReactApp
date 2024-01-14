@@ -9,14 +9,9 @@ import JobCard from "../../components/JobCard";
 import { CompanySidebarFilterComp } from "./CompanySimpleComp";
 import { companyPageBanner } from "../../utils/AppLocalAssetsImports";
 import { CounterRowComp } from "../../components/Reusable";
-import { jobDummyData } from "../../data/job_dummyData";
-import {
-    companyDetailInterface,
-    jobInterface,
-} from "../../utils/AppReusableInterfaces";
+import { companyDetailInterface } from "../../utils/AppReusableInterfaces";
 import { companyDummyData } from "../../data/company_dummyData";
 
-const companyList = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 const CompanyPage = () => {
     return (
         <Box w="100%" bg={AppColors.bgColor}>

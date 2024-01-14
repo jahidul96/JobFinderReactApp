@@ -13,8 +13,6 @@ import { CounterRowComp } from "../../components/Reusable";
 import { jobDummyData } from "../../data/job_dummyData";
 import { jobInterface } from "../../utils/AppReusableInterfaces";
 
-const jobList = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-
 const FindJob = () => {
     return (
         <Box w="100%" bg={AppColors.bgColor}>

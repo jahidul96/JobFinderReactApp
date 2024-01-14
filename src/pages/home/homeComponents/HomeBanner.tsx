@@ -7,6 +7,8 @@ import HomeBannerInputComp from "./HomeBannerInputComp";
 
 const HomeBanner = () => {
     const [title, setTitle] = useState("");
+
+    console.log(title);
     return (
         <Box className="bgHomeBanner">
             <Box

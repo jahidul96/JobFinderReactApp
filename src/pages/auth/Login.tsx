@@ -1,6 +1,5 @@
 import {
     Box,
-    Container,
     Button,
     Flex,
     Input,
@@ -8,7 +7,7 @@ import {
     Text,
     Spinner,
 } from "@chakra-ui/react";
-import { useContext, useState } from "react";
+import { useState } from "react";
 import { AppColors } from "../../utils/AppColors";
 
 interface loginInterFace {
@@ -21,6 +20,7 @@ function Login({ onClick }: loginInterFace) {
 
     const loginUser = (e: any) => {
         e.preventDefault();
+        console.log(email, password, setLoading);
     };
 
     return (

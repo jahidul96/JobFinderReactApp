@@ -1,5 +1,4 @@
 import { Box } from "@chakra-ui/react";
-import homeBanner from "../../assets/images/home_banner.jpg";
 import { useState } from "react";
 import Login from "./Login";
 import SignUp from "./Register";

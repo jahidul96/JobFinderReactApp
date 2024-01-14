@@ -5,7 +5,6 @@ import JobCard from "../../../components/JobCard";
 import { jobDummyData } from "../../../data/job_dummyData";
 import { jobInterface } from "../../../utils/AppReusableInterfaces";
 
-const categoryCount = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
 const HomeJobComp = () => {
     return (
         <Box

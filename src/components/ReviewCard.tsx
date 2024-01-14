@@ -1,4 +1,4 @@
-import { Avatar, Box, Card, Flex, Image, Text } from "@chakra-ui/react";
+import { Avatar, Box, Card, Flex, Text } from "@chakra-ui/react";
 import { AppColors } from "../utils/AppColors";
 import { fontFamily } from "../utils/Font";
 import { reviewInterface } from "../utils/AppReusableInterfaces";
