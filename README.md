@@ -8,10 +8,10 @@
 -   Used Typescipt and Vite.
 -   It's Functional with static data!.
 -   Used reusable code.
--   Hosted in netlify!. Live link <a href="https://jobfinder-webapp.netlify.app/" target="_blank">! deployed from github so whenever i will make any changes it will update automatically!
+-   Hosted in netlify!. <a href="https://jobfinder-webapp.netlify.app/" target="_blank">Live link</a>! deployed from github so whenever i will make any changes it will update automatically!
 -   Will try to add all functionality with firebase or custome database!.
 
-# Live link here netlify link <a href="https://jobfinder-webapp.netlify.app/" target="_blank">
+# <a href="https://jobfinder-webapp.netlify.app/" target="_blank">Live link here netlify link </a>
 
 # If Anyone need any help! just ping me on my email or direct message me in facebook(link in profile)!
 
