@@ -4,8 +4,10 @@ import { fontFamily } from "../../../utils/Font";
 import JobCard from "../../../components/JobCard";
 import { jobDummyData } from "../../../data/job_dummyData";
 import { jobInterface } from "../../../utils/AppReusableInterfaces";
+import { useNavigate } from "react-router-dom";
 
 const HomeJobComp = () => {
+    const navigate = useNavigate();
     return (
         <Box
             mt="50px"
@@ -58,6 +60,7 @@ const HomeJobComp = () => {
                     bg={AppColors.black}
                     color={AppColors.white}
                     _hover={{ bg: AppColors.primary, color: AppColors.white }}
+                    onClick={() => navigate("/findjob")}
                 >
                     Browse All Job
                 </Button>

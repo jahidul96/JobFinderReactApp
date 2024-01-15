@@ -8,6 +8,8 @@ import bankLogo from "../assets/images/icons/bank.png";
 import softwareDevLogo from "../assets/images/icons/developer.png";
 import appDevLogo from "../assets/images/icons/development.png";
 
+const statiCompanyLogo =
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRsDcwXQ2w9u4FMlEf_MMgtV0UGOblUKItSPQ&usqp=CAU";
 export {
     findJobPageBanner,
     blogPageBanner,
@@ -18,4 +20,5 @@ export {
     bankLogo,
     pyLogo,
     softwareDevLogo,
+    statiCompanyLogo,
 };

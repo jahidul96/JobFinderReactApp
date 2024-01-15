@@ -8,7 +8,11 @@ interface reviewCardInterface {
 }
 const ReviewCard = ({ reviewDetails }: reviewCardInterface) => {
     return (
-        <Card w={{ base: "96%", sm: "100%", md: "45%", lg: "30%" }} p="30px">
+        <Card
+            w={{ base: "96%", sm: "100%", md: "45%", lg: "30%" }}
+            p="30px"
+            mb="15px"
+        >
             <Flex alignItems="center">
                 <Avatar
                     w="60px"

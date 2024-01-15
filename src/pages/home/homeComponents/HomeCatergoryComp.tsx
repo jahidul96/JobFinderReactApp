@@ -5,8 +5,10 @@ import { fontFamily } from "../../../utils/Font";
 import CategoriesCard from "../../../components/CategoriesCard";
 import { categoryData } from "../../../data/categoryDummyData";
 import { catergoryInterface } from "../../../utils/AppReusableInterfaces";
+import { useNavigate } from "react-router-dom";
 
 const HomeCatergoryComp = () => {
+    const navigate = useNavigate();
     return (
         <Box mt="50px" w="100%" px={{ base: "15px", sm: "20px" }}>
             <Text
@@ -52,6 +54,7 @@ const HomeCatergoryComp = () => {
                     bg={AppColors.black}
                     color={AppColors.white}
                     _hover={{ bg: AppColors.primary, color: AppColors.white }}
+                    onClick={() => navigate("/allcategory")}
                 >
                     Browse All Category
                 </Button>

@@ -4,8 +4,10 @@ import { fontFamily } from "../../../utils/Font";
 import ReviewCard from "../../../components/ReviewCard";
 import { reviewData } from "../../../data/reviewData";
 import { reviewInterface } from "../../../utils/AppReusableInterfaces";
+import { useNavigate } from "react-router-dom";
 
 const OurReviewComp = () => {
+    const navigate = useNavigate();
     return (
         <Box mt="50px" w="100%" px={{ base: "15px", sm: "20px" }}>
             <Text
@@ -26,7 +28,7 @@ const OurReviewComp = () => {
                 Customer Valuable Reviews
             </Text>
 
-            {/* categories card  */}
+            {/* review card  */}
             <Box mt="30px" w="100%">
                 <Flex
                     gap="15px"
@@ -46,6 +48,7 @@ const OurReviewComp = () => {
                     bg={AppColors.black}
                     color={AppColors.white}
                     _hover={{ bg: AppColors.primary, color: AppColors.white }}
+                    onClick={() => navigate("/allreview")}
                 >
                     See All Reviews
                 </Button>

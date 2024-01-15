@@ -3,6 +3,7 @@ import { fontFamily } from "../utils/Font";
 import { AppColors } from "../utils/AppColors";
 import { CiLocationOn } from "react-icons/ci";
 import { candidateDetailInterface } from "../utils/AppReusableInterfaces";
+import { SkillBox } from "./Reusable";
 
 interface pageInterface {
     profileDetails: candidateDetailInterface;
@@ -65,23 +66,5 @@ const CandidateProfileCard = ({ profileDetails }: pageInterface) => {
         </Card>
     );
 };
-
-interface sikllBoxInterface {
-    skillText: string;
-}
-const SkillBox = ({ skillText }: sikllBoxInterface) => (
-    <Box
-        px="8px"
-        py="2px"
-        borderColor={AppColors.lightGrey}
-        borderWidth="1px"
-        mb="6px"
-        mr="7px"
-    >
-        <Text fontFamily={fontFamily} color={AppColors.black} fontSize="11px">
-            {skillText}
-        </Text>
-    </Box>
-);
 
 export default CandidateProfileCard;

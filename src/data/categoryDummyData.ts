@@ -68,4 +68,16 @@ export const categoryData: catergoryInterface[] = [
         jobTitle: "App developer",
         jobFound: "20",
     },
+    {
+        icon: jsLogo,
+        id: "1",
+        jobTitle: "Javascript Developer",
+        jobFound: "20",
+    },
+    {
+        icon: softwareDevLogo,
+        id: "9",
+        jobTitle: "Software developer",
+        jobFound: "3",
+    },
 ];

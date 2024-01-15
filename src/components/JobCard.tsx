@@ -8,6 +8,7 @@ import {
     companyDetailInterface,
     jobInterface,
 } from "../utils/AppReusableInterfaces";
+import { useNavigate } from "react-router-dom";
 
 interface jobCardInterface {
     isBgColor?: boolean;
@@ -23,6 +24,7 @@ const JobCard = ({
     jobCard,
     companyDetails,
 }: jobCardInterface) => {
+    const navigate = useNavigate();
     return (
         <Box
             w={{
@@ -146,6 +148,11 @@ const JobCard = ({
                 h="45px"
                 mt="25px"
                 _hover={{ bg: AppColors.primary, color: AppColors.white }}
+                onClick={
+                    jobCard
+                        ? () => navigate("/singlejobdetails")
+                        : () => navigate("/singlecompanydetails")
+                }
             >
                 {jobCard ? "Apply Now" : "See Details"}
             </Button>

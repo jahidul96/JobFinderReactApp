@@ -3,8 +3,8 @@ import { Box, Button, Flex } from "@chakra-ui/react";
 import { AppColors } from "../../utils/AppColors";
 import CommonStyleBanner from "../../components/CommonStyleBanner";
 import RowResponsiveComp from "../../components/RowResponsiveComp";
-import Sidebar from "../../components/Sidebar";
-import CommonRightBigSidebar from "../../components/CommonRightBigSidebar";
+import CommonSmallSidebar from "../../components/CommonSmallSidebar";
+import CommonBigSidebar from "../../components/CommonBigSidebar";
 import { CandidateSidebarFilterComp } from "./CandidateSimpleComp";
 import { candidatePageBanner } from "../../utils/AppLocalAssetsImports";
 import { CounterRowComp } from "../../components/Reusable";
@@ -25,12 +25,12 @@ const CandidatePage = () => {
                 children={
                     <>
                         {/* sidebar */}
-                        <Sidebar
+                        <CommonSmallSidebar
                             height="300px"
                             children={<CandidateSidebarFilterComp />}
                         />
                         {/* job side comp */}
-                        <CommonRightBigSidebar
+                        <CommonBigSidebar
                             children={
                                 <>
                                     {/* count info comp */}
