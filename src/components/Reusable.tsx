@@ -187,17 +187,7 @@ export const OverViewIconComp = ({
 }: overviewIconCompInterface) => {
     return (
         <Flex alignItems="center" mb="15px" py="5px">
-            <Box
-                w="50px"
-                h="50px"
-                borderRadius="5px"
-                bg={AppColors.primaryLayerColor}
-                display="flex"
-                justifyContent="center"
-                alignItems="center"
-            >
-                {icon}
-            </Box>
+            <SocialIconBox icon={icon} />
             <Box ml="15px">
                 <Text
                     fontFamily={fontFamily}
@@ -218,3 +208,24 @@ export const OverViewIconComp = ({
         </Flex>
     );
 };
+
+interface socialBoxInterface {
+    icon: any;
+    mx?: string;
+}
+
+export const SocialIconBox = ({ icon, mx }: socialBoxInterface) => (
+    <Box
+        w="50px"
+        h="50px"
+        mx={mx}
+        borderRadius="5px"
+        bg={AppColors.primaryLayerColor}
+        display="flex"
+        justifyContent="center"
+        alignItems="center"
+        cursor="pointer"
+    >
+        {icon}
+    </Box>
+);

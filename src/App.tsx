@@ -12,6 +12,8 @@ import { AllCategory } from "./pages/all_category/AllCategory";
 import AllReview from "./pages/all_review/AllReview";
 import SingleJobDetails from "./pages/find_job/single_job_details/SingleJobDetails";
 import SingleCompanyDetails from "./pages/company/single_company_details/SingleCompanyDetails";
+import CandidateDetails from "./pages/candidate/candidate_details/CandidateDetails";
+import BlogDetails from "./pages/blog/blog_details/BlogDetails";
 
 function App() {
     return (
@@ -33,7 +35,9 @@ function App() {
                     element={<SingleCompanyDetails />}
                 />
                 <Route path="/candidatepage" element={<CandidatePage />} />
+                <Route path="/candidetailpage" element={<CandidateDetails />} />
                 <Route path="/blogpage" element={<BlogPage />} />
+                <Route path="/blogdetailpage" element={<BlogDetails />} />
                 <Route path="/contactpage" element={<ContactPage />} />
                 <Route path="/auth" element={<AuthPage />} />
                 <Route path="/allcategory" element={<AllCategory />} />

@@ -11,11 +11,13 @@ import {
 import { AppColors } from "../utils/AppColors";
 import { fontFamily } from "../utils/Font";
 import { blogInterface } from "../utils/AppReusableInterfaces";
+import { useNavigate } from "react-router-dom";
 
 interface pageInterface {
     blogDetails: blogInterface;
 }
 const BlogCard = ({ blogDetails }: pageInterface) => {
+    const navigate = useNavigate();
     return (
         <Card
             w={{ base: "90%", sm: "90%", md: "45%", lg: "30%" }}
@@ -71,6 +73,7 @@ const BlogCard = ({ blogDetails }: pageInterface) => {
                             md: "15px",
                             lg: "15px",
                         }}
+                        lineHeight="25px"
                     >
                         {blogDetails.postDetailsText}
                     </Text>
@@ -83,6 +86,7 @@ const BlogCard = ({ blogDetails }: pageInterface) => {
                         bg: AppColors.primary,
                     }}
                     mt={-5}
+                    onClick={() => navigate("/blogdetailpage")}
                 >
                     Read More
                 </Button>

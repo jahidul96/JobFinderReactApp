@@ -1,30 +1,18 @@
-# React + TypeScript + Vite
+# React JobFinder app frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+-   It's a React Jobfinder Frontend Design.
+-   Designed Most of the pages.
+-   Used chakra ui for everything(responsiveness also)
+-   Fully Responsive.
+-   Fully responsive and used some static data but used multiple data models!
+-   Used Typescipt and Vite.
+-   It's Functional with static data!.
+-   Used reusable code.
+-   Hosted in netlify!. Live link <a href="https://jobfinder-webapp.netlify.app/" target="_blank">! deployed from github so whenever i will make any changes it will update automatically!
+-   Will try to add all functionality with firebase or custome database!.
 
-Currently, two official plugins are available:
+# Live link here netlify link <a href="https://jobfinder-webapp.netlify.app/" target="_blank">
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+# If Anyone need any help! just ping me on my email or direct message me in facebook(link in profile)!
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+-   Trying to learn web-development again!!!!!!!
