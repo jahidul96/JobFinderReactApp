@@ -13,6 +13,7 @@ const BlogDetailsLeftSidebar = () => {
             borderRadius="10px"
             px="20px"
             py="30px"
+            mb="30px"
         >
             {/* writer profile name and date */}
             <Flex justifyContent="space-between" alignItems="center" mb="15px">
@@ -54,14 +55,14 @@ const BlogDetailsLeftSidebar = () => {
                 src={blogPageBanner}
                 alt="person image"
                 w="100%"
-                h="500px"
+                h={{ base: "300px", sm: "300px", md: "400px", lg: "500px" }}
                 borderRadius="10px"
                 fit="cover"
                 mt="30px"
             />
 
             <Text
-                fontSize="20px"
+                fontSize={{ base: "14px", sm: "15px", md: "20px", lg: "20px" }}
                 fontWeight="bold"
                 fontFamily={fontFamily}
                 my="20px"
@@ -72,7 +73,11 @@ const BlogDetailsLeftSidebar = () => {
                 professor
             </Text>
 
-            <Text fontSize="14px" fontFamily={fontFamily} lineHeight="25px">
+            <Text
+                fontSize={{ base: "12px", sm: "12px", md: "14px", lg: "14px" }}
+                fontFamily={fontFamily}
+                lineHeight="25px"
+            >
                 Where does it come from? Contrary to popular belief, Lorem Ipsum
                 is not simply random text. It has roots in a piece of classical
                 Latin literature from 45 BC, making it over 2000 years old.
@@ -89,7 +94,7 @@ const BlogDetailsLeftSidebar = () => {
             </Text>
 
             <Text
-                fontSize="20px"
+                fontSize={{ base: "14px", sm: "15px", md: "20px", lg: "20px" }}
                 fontWeight="bold"
                 fontFamily={fontFamily}
                 my="20px"
@@ -97,7 +102,11 @@ const BlogDetailsLeftSidebar = () => {
                 Deep learning With Js! We Will.
             </Text>
 
-            <Text fontSize="14px" fontFamily={fontFamily} lineHeight="25px">
+            <Text
+                fontSize={{ base: "12px", sm: "12px", md: "14px", lg: "14px" }}
+                fontFamily={fontFamily}
+                lineHeight="25px"
+            >
                 Contrary to popular belief, Lorem Ipsum is not simply random
                 text. It has roots in a piece of classical Latin literature from
                 45 BC, making it over 2000 years old. Richard McClintock, a
